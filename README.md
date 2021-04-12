@@ -1,2 +1,3 @@
 # Cardsticks
- A To-Do app which stores the notes  authentication from firebase
+ A To-Do app which stores the notes  
+ > For Learning firebase.
