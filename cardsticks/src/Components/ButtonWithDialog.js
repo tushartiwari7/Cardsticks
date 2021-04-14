@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
+import BasicButton from './BasicButton'
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
@@ -20,9 +21,9 @@ export default function FormDialog(props) {
 
   return (
     <div>
-      <Button  color="inherit" onClick={handleClickOpen}>
-        {props.value}
-      </Button>
+      <BasicButton  color="inherit" onClick={handleClickOpen}>
+        Sign Up
+      </BasicButton>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
         <DialogContent>
@@ -40,12 +41,12 @@ export default function FormDialog(props) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="inherit">
+          <BasicButton onClick={handleClose} color="inherit">
             Cancel
-          </Button>
-          <Button onClick={handleClose} color="inherit">
+          </BasicButton>
+          <BasicButton onClick={handleClose} color="inherit">
             Subscribe
-          </Button>
+          </BasicButton>
         </DialogActions>
       </Dialog>
     </div>

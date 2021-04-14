@@ -39,7 +39,7 @@ export default function ButtonAppBar() {
           <SimpleButton color="inherit">Logout</SimpleButton>
           <SimpleButton color="inherit">Create Guide</SimpleButton>
           <SimpleButton color="inherit">Login</SimpleButton>
-          <ButtonWithDialog color="inherit" value="Sign Up" ></ButtonWithDialog>
+          <ButtonWithDialog color="inherit" >Sign Up</ButtonWithDialog>
           
         </Toolbar>
       </AppBar>
