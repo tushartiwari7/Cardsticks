@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ButtonWithDialog from './ButtonWithDialog';
+import ButtonWithDialog from './ButtonWithDialog/ButtonWithDialog';
 import SimpleButton from './BasicButton';
 
 const useStylesforAppbar = makeStyles((theme) => ({
@@ -22,8 +22,6 @@ const useStylesforAppbar = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStylesforAppbar();
-  
-
 
   return (
     <div className={classes.root}>
@@ -38,7 +36,7 @@ export default function ButtonAppBar() {
           <SimpleButton color="inherit" >Account</SimpleButton>
           <SimpleButton color="inherit">Logout</SimpleButton>
           <SimpleButton color="inherit">Create Guide</SimpleButton>
-          <SimpleButton color="inherit">Login</SimpleButton>
+          <ButtonWithDialog color="inherit" >Log In</ButtonWithDialog>
           <ButtonWithDialog color="inherit" >Sign Up</ButtonWithDialog>
           
         </Toolbar>
