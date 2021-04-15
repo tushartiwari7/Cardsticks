@@ -3,7 +3,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const SimpleButton = withStyles({
     root: {
-      textTransform: 'none'
+      textTransform: 'none',
+      margin: '8px 20px'
     },
   })(Button);
   
