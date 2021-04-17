@@ -5,6 +5,8 @@ import BasicButton from '../BasicButton'
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import BasicButtonWithMargin from '../BasicButtonWithMargin'
+
  const Login = (props) => {
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
@@ -41,9 +43,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
           />
         </DialogContent>
         <DialogActions justifyContent="start" spacing={2}>
-          <BasicButton variant="contained" onClick={handleClose} color="primary">
+          <BasicButtonWithMargin variant="contained" onClick={handleClose} color="primary">
             {props.children}
-          </BasicButton>
+          </BasicButtonWithMargin>
         </DialogActions>
       </Dialog>
       </>
