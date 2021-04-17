@@ -1,10 +1,11 @@
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
-  const BasicButton = withStyles({
+  const BasicButtonWithMargin = withStyles({
       root: {
-        textTransform: 'none'
+        textTransform: 'none',
+        margin: '8px 20px'
       },
     })(Button);  
   
-export default BasicButton;
+export default BasicButtonWithMargin;
