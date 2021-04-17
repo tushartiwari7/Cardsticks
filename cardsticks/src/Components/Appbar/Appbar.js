@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      
+
       <AppBar position="fixed">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
@@ -34,9 +34,9 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             News
           </Typography>
-          <SimpleButton color="inherit" >Account</SimpleButton>
+          <ButtonWithDialog color="inherit" >My Account</ButtonWithDialog>
           <SimpleButton color="inherit">Logout</SimpleButton>
-          <SimpleButton color="inherit">Create Guide</SimpleButton>
+          <ButtonWithDialog color="inherit" >Add Note</ButtonWithDialog>
           <ButtonWithDialog color="inherit" >Log In</ButtonWithDialog>
           <ButtonWithDialog color="inherit" >Sign Up</ButtonWithDialog>
           
