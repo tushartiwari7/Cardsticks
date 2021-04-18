@@ -9,6 +9,7 @@ import BasicButtonWithMargin from '../BasicButtonWithMargin';
 import { db } from './firebase_config';
 import firebase from 'firebase';
 
+
  const AddNote = (props) => {
     const [open, setOpen] = useState(false);
     const handleClickOpen = () => {
@@ -19,8 +20,9 @@ import firebase from 'firebase';
     };
 
     var [note,setNote] = useState(null);
-    const addSingleNote = () => {
-        console.log(note);
+
+    const addSingleNote = (e) => {
+        e.preventDefault();
         db.collection("notes").add({
             isCompleted: false,
             work: note,
@@ -34,11 +36,10 @@ import firebase from 'firebase';
         <BasicButton  color="inherit" onClick={handleClickOpen}>
           {props.children}
         </BasicButton>
-
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <Dialog open={open} onClose={handleClose} fullWidth maxWidth="xs" aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">{props.children}</DialogTitle>
         <DialogContent>
-          
+          <form>
           <TextField
             autoFocus
             margin="dense"
@@ -49,8 +50,10 @@ import firebase from 'firebase';
             fullWidth
             onChange={(e) => {
                 setNote(e.target.value);
-            } }
+            }}
           />
+          <button type="submit" style={{display: "none"}} onClick={addSingleNote} >Submit</button>
+          </form>
         </DialogContent>
         <DialogActions justifyContent="start" spacing={2}>
           <BasicButtonWithMargin 
@@ -63,6 +66,7 @@ import firebase from 'firebase';
           </BasicButtonWithMargin>
         </DialogActions>
       </Dialog>
+        
       </>
      );
  }

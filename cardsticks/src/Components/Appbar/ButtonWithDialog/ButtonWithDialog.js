@@ -20,7 +20,7 @@ export default function FormDialog(props) {
 
   if(props.children==='Add Note') {
     return (
-      <AddNote children={props.children} />
+      <AddNote  children={props.children} />
     );
   }
   

@@ -40,7 +40,7 @@ const MyList = () => {
         db.collection("notes").doc(item.id).delete();
     }
         return (
-                <ListItem alignItems="flex-center">
+                <ListItem alignItems="flex-center" style={{border: "solid", borderWidth: "0px 0px 2px 0px",borderBottomColor: "#222"}}>
                     <ListItemText 
                         inset
                         primary={item.todo} 
