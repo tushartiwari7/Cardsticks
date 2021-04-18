@@ -42,8 +42,10 @@ const MyList = () => {
         return (
                 <ListItem alignItems="flex-center">
                     <ListItemText 
+                        inset
                         primary={item.todo} 
                         id= {item.id}
+                        disableTypography={false}
                         secondary={item.isCompleted? "Completed ✅" : "Pending ❌"}/>
                     <ListItemSecondaryAction>
                         <Switch
