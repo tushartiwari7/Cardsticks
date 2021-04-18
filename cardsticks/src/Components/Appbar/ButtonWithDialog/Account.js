@@ -22,7 +22,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
           {props.children}
         </BasicButton>
 
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <Dialog fullWidth maxWidth="xs" open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">{props.children}</DialogTitle>
         <DialogContent>
         <DialogContentText id="alert-dialog-description">

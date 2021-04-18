@@ -3,15 +3,16 @@ import Appbar from './Components/Appbar/Appbar';
 import MyList from './Components/List';
 import { makeStyles} from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     maxWidth: 480,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "theme.palette.background.paper",
     borderRadius: "10px",
-    border: "1px #111111",
   },
-}));
+}
+));
 
 function App() {
   const classes = useStyles();
