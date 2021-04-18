@@ -49,7 +49,6 @@ import firebase from 'firebase';
             fullWidth
             onChange={(e) => {
                 setNote(e.target.value);
-                // console.log(note);
             } }
           />
         </DialogContent>
