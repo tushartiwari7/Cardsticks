@@ -2,6 +2,7 @@ import List from '@material-ui/core/List';
 import Appbar from './Components/Appbar/Appbar';
 import MyList from './Components/List';
 import { makeStyles} from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -19,11 +20,11 @@ function App() {
       <header className="App-header">
         <Appbar />
       </header>
-      <div style={{margin:"100px auto",width: "70%"}}>
-        <List className={classes.root} >
+      <Box mx="auto" my="100px" className={classes.root}>
+        <List  display="inline" px="auto">
           <MyList />
         </List>
-      </div>
+      </Box>
     </div>
   );
 }
