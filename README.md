@@ -1,6 +1,6 @@
 # Cardsticks
  A To-Do app which stores the notes 
-> ###  [`Live Preview`](https://cardsticks.vercel.app)
+> __[`Live Preview`](https://cardsticks.vercel.app)__
 ## Installation
 Clone [this](https://github.com/tushartiwari7/Cardsticks) Repo
 ### `npm install` 
