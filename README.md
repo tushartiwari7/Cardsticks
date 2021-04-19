@@ -1,6 +1,6 @@
 # Cardsticks
- A To-Do app which stores the notes  
- > For Learning firebase.
+ A To-Do app which stores the notes 
+> ###  [`Live Preview`](https://cardsticks.vercel.app)
 ## Installation
 Clone [this](https://github.com/tushartiwari7/Cardsticks) Repo
 ### `npm install` 
