@@ -3,11 +3,11 @@
 > __[`Live Preview`](https://cardsticks.vercel.app)__
 ## Installation
 Clone [this](https://github.com/tushartiwari7/Cardsticks) Repo
-### `npm install` 
- > this will install all the dependencies for this projecct on your local system. 
  ### `cd cardsticks`
  > this will move your present Working Directory to `/cardsticks`
  
+### `npm install` 
+ > this will install all the dependencies for this projecct on your local system. 
  ### `npm start`
  Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
