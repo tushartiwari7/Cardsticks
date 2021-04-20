@@ -21,6 +21,7 @@ const MyList = () => {
                     id: el.id,
                     todo: el.data().work,
                     isCompleted: el.data().isCompleted,
+                    timeStamp: el.data().time,
                 }))
             );
         })
@@ -28,25 +29,45 @@ const MyList = () => {
     
 
     return (node.map((item) =>{
-
-        
+        console.log({item});
     function handleToggle() {
         db.collection("notes").doc(item.id).update({
             isCompleted: !item.isCompleted,
         })
     }
-
+    // var time = new Date((item.timeStamp.seconds)*1000);
+    
     function deleteNode() {
         db.collection("notes").doc(item.id).delete();
     }
+    function getRandomColor()
+    {
+        var letters="0123456789ABCDEF";
+        
+        var color='#';
+        for(var i=0;i<6;i++)
+        {
+            color+=letters[Math.floor(Math.random()*16)];
+    
+        }
+        return color;
+    }
+
+const styles = {
+    border: "solid", 
+    borderWidth: "0px 0px 2px 0px",
+    borderBottomColor: getRandomColor(),
+    marginBottom: "20px"
+};
         return (
-                <ListItem alignItems="flex-center" style={{border: "solid", borderWidth: "0px 0px 2px 0px",borderBottomColor: "#222"}}>
+                <ListItem 
+                    alignItems="flex-center" 
+                    style={styles}>
                     <ListItemText 
-                        inset
                         primary={item.todo} 
                         id= {item.id}
                         disableTypography={false}
-                        secondary={item.isCompleted? "Completed ✅" : "Pending ❌"}/>
+                        secondary={(item.isCompleted? "Completed ✅" : "Pending ❌")}/>
                     <ListItemSecondaryAction>
                         <Switch
                             edge="end"
