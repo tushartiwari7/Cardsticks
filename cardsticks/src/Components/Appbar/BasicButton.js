@@ -6,5 +6,4 @@ import { withStyles } from '@material-ui/core/styles';
         textTransform: 'none'
       },
     })(Button);  
-  
 export default BasicButton;
