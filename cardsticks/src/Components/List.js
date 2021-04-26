@@ -15,7 +15,7 @@ const MyList = () => {
 
     // fetch notes from firebase
     const getNotes = () => {
-        db.collection("notes").onSnapshot((query) => {
+        db.collection("notes").orderBy('time','desc').onSnapshot((query) => {
             setNode(
                 query.docs.map((el) => ({
                     id: el.id,
