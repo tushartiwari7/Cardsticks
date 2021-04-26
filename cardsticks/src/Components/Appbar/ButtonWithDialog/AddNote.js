@@ -7,7 +7,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import BasicButtonWithMargin from '../BasicButtonWithMargin';
 import { db } from './firebase_config';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 
  const AddNote = (props) => {
